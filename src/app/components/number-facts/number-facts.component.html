@@ -1,0 +1,38 @@
+<div class="container">
+    <h1 class="mt-3">Mathematical Properties</h1>
+
+    <!-- Input Field and Fetch Button -->
+    <div class="input-group mt-3">
+        <input type="number" class="form-control" placeholder="Enter a number" [(ngModel)]="inputNumber">
+        <button class="btn btn-primary" (click)="fetchNumberFacts()">Get Properties</button>
+    </div>
+
+    <!-- Error Message -->
+    <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
+
+    <!-- Display API Response -->
+    <ng-container *ngIf="numberFacts">
+        <table class="table table-bordered mt-3">
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th>Is Prime?</th>
+              <th>Is Perfect?</th>
+              <th>Properties</th>
+              <th>Digit Sum</th>
+              <th>Fun Fact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+               <td>{{ numberFacts.number }}</td> 
+               <td>{{ numberFacts.is_prime ? 'Yes' : 'No' }}</td> 
+               <td>{{ numberFacts.is_perfect ? 'Yes' : 'No' }}</td> 
+               <td>{{ numberFacts.properties.join(', ') }}</td>
+               <td>{{ numberFacts.digit_sum }}</td>
+               <td>{{ numberFacts.fun_fact }}</td>
+            </tr>
+          </tbody>
+        </table>
+    </ng-container>
+</div>
