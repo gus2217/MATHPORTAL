@@ -4,11 +4,11 @@ import { Observable } from 'rxjs';
 
 export interface NumberFacts {
   number: number;
-  is_prime: boolean;
-  is_perfect: boolean;
+  isPrime: boolean;
+  isPerfect: boolean;
   properties: string[];
-  digit_sum: number;
-  fun_fact: string;
+  digitSum: number;
+  funFact: string;
 }
 
 @Injectable({

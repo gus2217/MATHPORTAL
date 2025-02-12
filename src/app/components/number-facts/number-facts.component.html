@@ -16,8 +16,8 @@
           <thead>
             <tr>
               <th>Number</th>
-              <th>Is Prime?</th>
-              <th>Is Perfect?</th>
+              <th>Prime</th>
+              <th>Perfect</th>
               <th>Properties</th>
               <th>Digit Sum</th>
               <th>Fun Fact</th>
@@ -26,11 +26,11 @@
           <tbody>
             <tr>
                <td>{{ numberFacts.number }}</td> 
-               <td>{{ numberFacts.is_prime ? 'Yes' : 'No' }}</td> 
-               <td>{{ numberFacts.is_perfect ? 'Yes' : 'No' }}</td> 
+               <td>{{ numberFacts.isPrime ? 'Yes' : 'No' }}</td> 
+               <td>{{ numberFacts.isPerfect ? 'Yes' : 'No' }}</td> 
                <td>{{ numberFacts.properties.join(', ') }}</td>
-               <td>{{ numberFacts.digit_sum }}</td>
-               <td>{{ numberFacts.fun_fact }}</td>
+               <td>{{ numberFacts.digitSum }}</td>
+               <td>{{ numberFacts.funFact }}</td>
             </tr>
           </tbody>
         </table>
