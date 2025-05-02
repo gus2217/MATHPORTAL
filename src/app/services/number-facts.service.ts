@@ -15,7 +15,7 @@ export interface NumberFacts {
   providedIn: 'root'
 })
 export class NumberFactsService {
-  private apiUrl = 'https://localhost:7110/api/Math'; // Replace with your API URL
+  private apiUrl = 'https://d5bb-197-254-8-98.ngrok-free.app'; // Replace with your API URL
 
   constructor(private http: HttpClient) {}
 
